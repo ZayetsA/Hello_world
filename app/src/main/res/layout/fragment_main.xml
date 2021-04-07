@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <TextView
+        android:id="@+id/main_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, world"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/open_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <Button
+        android:id="@+id/open_buttons"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="open buttons"
+        app:layout_constraintBottom_toTopOf="@+id/open_radio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_header" />
+
+    <Button
+        android:id="@+id/open_radio"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="open checkboxes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open_buttons"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <Button
+        android:id="@+id/openInputs"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="open Inputs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open_radio"
+        tools:layout_editor_absoluteY="164dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
