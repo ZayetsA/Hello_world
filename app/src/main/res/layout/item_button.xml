@@ -4,19 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingTop="10dp">
+    android:paddingTop="@dimen/head_padding_top">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/one_button"
-        android:layout_width="250dp"
+        android:layout_width="@dimen/item_btn_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:background="@drawable/rv_btn_bg"
+        android:backgroundTint="@color/blue_for_rv_buttons"
         android:clickable="true"
         android:focusable="true"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingStart="@dimen/item_padding"
+        android:paddingEnd="@dimen/item_padding"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="@dimen/item_text_size"
         tools:ignore="SmallSp" />
 </LinearLayout>

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
 import com.example.hello_world.databinding.FragmentMainBinding
 
 
@@ -27,7 +27,7 @@ class MainFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (requireActivity() as AppCompatActivity).supportActionBar?.hide()
-        navigationController = Navigation.findNavController(view)
+        navigationController = findNavController(view)
         binding.openRadio.setOnClickListener(this)
         binding.openInputs.setOnClickListener(this)
         binding.openButtons.setOnClickListener(this)
@@ -37,8 +37,9 @@ class MainFragment : Fragment(), View.OnClickListener {
         if (v != null) {
             when (v.id) {
                 binding.openButtons.id -> navigationController?.navigate(R.id.action_mainFragment_to_buttonsFragment)
-                binding.openRadio.id -> navigationController?.navigate(R.id.action_mainFragment_to_checkFragment)
                 binding.openInputs.id -> navigationController?.navigate(R.id.action_mainFragment_to_inputsFragment)
+                binding.openRadio.id -> navigationController?.navigate(R.id.action_mainFragment_to_checkFragment)
+
             }
         }
     }

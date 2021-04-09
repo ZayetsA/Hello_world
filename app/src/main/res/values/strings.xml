@@ -9,4 +9,10 @@
     <string name="third_btn_caption">Чекбокс на Радио</string>
     <string name="actionbutton">ActionButton</string>
     <string name="buttons_descr">Кнопка плюс добавляет новую кнопку в контейнер наверху</string>
+    <string name="description_inputs_text">Поля ввода разного типа</string>
+    <string name="one_line_input_text">Однострочный текст</string>
+    <string name="five_line_input_text">Многострочный текст</string>
+    <string name="password_input_text">пароль</string>
+    <string name="numbers_input_text">цифры</string>
+    <string name="button_hidder_text">Спрятать клавиатуру</string>
 </resources>

@@ -21,7 +21,6 @@ class CheckFragment : Fragment() {
         return binding.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         (requireActivity() as AppCompatActivity).supportActionBar?.show()
         super.onViewCreated(view, savedInstanceState)
