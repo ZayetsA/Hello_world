@@ -26,6 +26,7 @@ class MainFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (requireActivity() as AppCompatActivity).supportActionBar?.hide()
         navigationController = Navigation.findNavController(view)
         binding.openRadio.setOnClickListener(this)
         binding.openInputs.setOnClickListener(this)
@@ -40,16 +41,6 @@ class MainFragment : Fragment(), View.OnClickListener {
                 binding.openInputs.id -> navigationController?.navigate(R.id.action_mainFragment_to_inputsFragment)
             }
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
     }
 
     override fun onDestroyView() {

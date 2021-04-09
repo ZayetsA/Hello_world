@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.HelloWorldApp"
+        applicationId "com.example.hello.world.app"
         minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
@@ -45,4 +45,5 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
     implementation 'com.google.android.material:material:1.4.0-alpha02'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation group: 'com.ibm.icu', name: 'icu4j', version: '51.1'
 }
