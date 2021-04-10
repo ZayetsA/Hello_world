@@ -25,11 +25,8 @@ class InputsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonCloseKeyboard.setOnClickListener {
-            try {
-                activity?.let { it1 ->
-                    hideSoftKeyboard(it1)
-                }
-            } catch (e: NullPointerException) {
+            activity?.let { it1 ->
+                hideSoftKeyboard(it1)
             }
         }
         (requireActivity() as AppCompatActivity).supportActionBar?.show()
@@ -37,12 +34,9 @@ class InputsFragment : Fragment() {
     }
 
     private fun hideSoftKeyboard(activity: Activity) {
-        val inputMethodManager: InputMethodManager = activity.getSystemService(
-            Activity.INPUT_METHOD_SERVICE
-        ) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(
-            activity.currentFocus!!.windowToken, 0
-        )
+        val inputMethodManager: InputMethodManager =
+            activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(activity.currentFocus?.windowToken, 0)
     }
 
     override fun onDestroyView() {

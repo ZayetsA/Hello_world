@@ -15,4 +15,6 @@
     <string name="password_input_text">пароль</string>
     <string name="numbers_input_text">цифры</string>
     <string name="button_hidder_text">Спрятать клавиатуру</string>
+    <string name="rv_item_name_en">Button number</string>
+    <string name="rv_item_name_rus">Кнопка номер</string>
 </resources>

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.ConfigurationCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hello_world.adapter.ButtonAdapter
@@ -45,24 +46,30 @@ class ButtonsFragment : Fragment() {
     }
 
     private fun addButton() {
+        getCorrectNameFromRes()
         listOfButtons.add(
             ButtonModel(
-                "кнопка номер " + convertIntoWords(
-                    lastContactId.toDouble(),
-                    "rus",
-                    "RU"
+                getCorrectNameFromRes() + " " + convertIntoWords(
+                    lastContactId.toDouble()
                 )
             )
         )
         ++lastContactId
     }
 
-    private fun convertIntoWords(str: Double, language: String, Country: String): String {
-        val local = Locale(language, Country)
+    private fun getCorrectNameFromRes(): String {
+        if (getCurrentLocale().language == "ru") return getString(R.string.rv_item_name_rus)
+        return getString(R.string.rv_item_name_en)
+    }
+
+    private fun convertIntoWords(str: Double): String {
         val ruleBasedNumberFormat =
-            RuleBasedNumberFormat(local, RuleBasedNumberFormat.SPELLOUT)
+            RuleBasedNumberFormat(getCurrentLocale(), RuleBasedNumberFormat.SPELLOUT)
         return ruleBasedNumberFormat.format(str)
     }
+
+    private fun getCurrentLocale(): Locale =
+        ConfigurationCompat.getLocales(resources.configuration)[0]
 
     override fun onDestroyView() {
         super.onDestroyView()
