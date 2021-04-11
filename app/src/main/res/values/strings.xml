@@ -17,4 +17,13 @@
     <string name="button_hidder_text">Спрятать клавиатуру</string>
     <string name="rv_item_name_en">Button number</string>
     <string name="rv_item_name_rus">Кнопка номер</string>
+    <string name="inputs_header_text">Кнопка Приборы отображает приборы</string>
+    <string name="tools_cb_text">Приборы</string>
+    <string name="radio_cb_text">Включить радио</string>
+    <string name="enable_seek_cb_text">Включить ползунок</string>
+    <string name="radio_inputs_text">Выбрать варинат по радио</string>
+    <string name="seek_bar_text">Выбрать вариант ползунком</string>
+    <string name="rb_1_text">Вариант 1</string>
+    <string name="rb_2_text">Вариант 2</string>
+    <string name="rb_3_text">Вариант 3</string>
 </resources>

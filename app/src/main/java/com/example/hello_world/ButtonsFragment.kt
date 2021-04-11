@@ -31,14 +31,14 @@ class ButtonsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         (requireActivity() as AppCompatActivity).supportActionBar?.show()
-        builtButtonsRV()
+        buildButtonsRV()
         binding.addButton.setOnClickListener {
             addButton()
             adapter.notifyDataSetChanged()
         }
     }
 
-    private fun builtButtonsRV() {
+    private fun buildButtonsRV() {
         addButton()
         adapter = ButtonAdapter(listOfButtons)
         binding.rvButtons.adapter = adapter

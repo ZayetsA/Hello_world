@@ -4,16 +4,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/big_padding"
     tools:context=".CheckFragment">
 
     <TextView
+        android:id="@+id/description_inputs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AddCheckbox"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="@dimen/head_padding_bottom"
+        android:paddingBottom="@dimen/head_padding_bottom"
+        android:text="@string/inputs_header_text"
+        android:textSize="@dimen/small_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SmallSp" />
+
+    <CheckBox
+        android:id="@+id/access_tool_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_cb"
+        android:buttonTint="@color/blue_for_mb"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layoutDirection="rtl"
+        android:text="@string/tools_cb_text"
+        android:textSize="@dimen/cb_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_inputs" />
+
+    <CheckBox
+        android:id="@+id/access_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_cb"
+        android:buttonTint="@color/blue_for_mb"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layoutDirection="rtl"
+        android:text="@string/radio_cb_text"
+        android:textSize="@dimen/cb_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/access_tool_check" />
+
+    <CheckBox
+        android:id="@+id/access_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:button="@drawable/custom_cb"
+        android:buttonTint="@color/blue_for_mb"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layoutDirection="rtl"
+        android:text="@string/enable_seek_cb_text"
+        android:textSize="@dimen/cb_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/access_radio" />
+
+    <TextView
+        android:id="@+id/radio_inputs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_mt"
+        android:paddingTop="@dimen/head_padding_bottom"
+        android:paddingBottom="@dimen/head_padding_bottom"
+        android:text="@string/radio_inputs_text"
+        android:textSize="@dimen/small_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/access_seek"
+        tools:ignore="SmallSp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_inputs">
+
+        <RadioButton
+            android:id="@+id/radio_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ms_radio_member"
+            android:layout_weight="1"
+            android:text="@string/rb_1_text" />
+
+        <RadioButton
+            android:id="@+id/radio_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ms_radio_member"
+            android:layout_weight="1"
+            android:text="@string/rb_2_text" />
+
+        <RadioButton
+            android:id="@+id/radio_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ms_radio_member"
+            android:layout_weight="1"
+            android:text="@string/rb_3_text" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/seek_bar_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin"
+        android:paddingTop="@dimen/head_padding_bottom"
+        android:paddingBottom="@dimen/head_padding_bottom"
+        android:text="@string/seek_bar_text"
+        android:textSize="@dimen/small_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        tools:ignore="SmallSp" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+
+        android:id="@+id/seek_radio_control"
+        android:layout_width="@dimen/width_of_seek_rb_control"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin"
+        android:max="3"
+        android:thumb="@drawable/thumb"
+        android:tickMark="@drawable/tickmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seek_bar_desc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
