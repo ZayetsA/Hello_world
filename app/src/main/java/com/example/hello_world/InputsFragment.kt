@@ -14,6 +14,7 @@ import com.example.hello_world.databinding.FragmentInputsBinding
 class InputsFragment : Fragment() {
     private lateinit var binding: FragmentInputsBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

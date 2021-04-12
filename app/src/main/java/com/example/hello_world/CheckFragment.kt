@@ -122,10 +122,12 @@ class CheckFragment : Fragment() {
         binding.seekRadioControl.progress = 0
     }
 
+
     private fun enableTools() {
         binding.accessRadio.isEnabled = true
         binding.accessSeek.isEnabled = true
     }
+
 
     private fun isEnabledRadioGroup(): Boolean {
         if (!binding.radioGroup.getChildAt(0).isEnabled) return false
