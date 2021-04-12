@@ -8,12 +8,13 @@ import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.hello_world.databinding.FragmentCheckBinding
+import com.example.hello_world.util.Constants
 
 
 class CheckFragment : Fragment() {
 
-    private var _binding: FragmentCheckBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var _binding: FragmentCheckBinding
+    private val binding get() = _binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,9 +58,18 @@ class CheckFragment : Fragment() {
         binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
             if (binding.seekRadioControl.isEnabled)
                 when (checkedId) {
-                    binding.radio1.id -> binding.seekRadioControl.setProgress(1, true)
-                    binding.radio2.id -> binding.seekRadioControl.setProgress(2, true)
-                    binding.radio3.id -> binding.seekRadioControl.setProgress(3, true)
+                    binding.radio1.id -> binding.seekRadioControl.setProgress(
+                        Constants.VALUE_FOR_RB_1,
+                        true
+                    )
+                    binding.radio2.id -> binding.seekRadioControl.setProgress(
+                        Constants.VALUE_FOR_RB_2,
+                        true
+                    )
+                    binding.radio3.id -> binding.seekRadioControl.setProgress(
+                        Constants.VALUE_FOR_RB_3,
+                        true
+                    )
                 }
         }
     }
@@ -119,10 +129,5 @@ class CheckFragment : Fragment() {
         binding.accessRadio.isEnabled = false
         binding.accessSeek.isEnabled = false
         binding.seekRadioControl.isEnabled = false
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

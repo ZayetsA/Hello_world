@@ -15,9 +15,9 @@ import com.ibm.icu.text.RuleBasedNumberFormat
 import java.util.*
 
 class ButtonsFragment : Fragment() {
-    var listOfButtons = ArrayList<ButtonModel>()
-    private var _binding: FragmentButtonsBinding? = null
-    private val binding get() = _binding!!
+    private var listOfButtons = ArrayList<ButtonModel>()
+    private lateinit var _binding: FragmentButtonsBinding
+    private val binding get() = _binding
     private lateinit var adapter: ButtonAdapter
     private var lastContactId = 1
 
@@ -46,20 +46,12 @@ class ButtonsFragment : Fragment() {
     }
 
     private fun addButton() {
-        getCorrectNameFromRes()
         listOfButtons.add(
             ButtonModel(
-                getCorrectNameFromRes() + " " + convertIntoWords(
-                    lastContactId.toDouble()
-                )
+                getString(R.string.rv_item_name) + " " + convertIntoWords(lastContactId.toDouble())
             )
         )
         ++lastContactId
-    }
-
-    private fun getCorrectNameFromRes(): String {
-        if (getCurrentLocale().language == "ru") return getString(R.string.rv_item_name_rus)
-        return getString(R.string.rv_item_name_en)
     }
 
     private fun convertIntoWords(str: Double): String {
@@ -70,9 +62,4 @@ class ButtonsFragment : Fragment() {
 
     private fun getCurrentLocale(): Locale =
         ConfigurationCompat.getLocales(resources.configuration)[0]
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }

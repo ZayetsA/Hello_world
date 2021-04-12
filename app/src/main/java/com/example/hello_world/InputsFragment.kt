@@ -12,8 +12,8 @@ import com.example.hello_world.databinding.FragmentInputsBinding
 
 
 class InputsFragment : Fragment() {
-    private var _binding: FragmentInputsBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var _binding: FragmentInputsBinding
+    private val binding get() = _binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,10 +37,5 @@ class InputsFragment : Fragment() {
         val inputMethodManager: InputMethodManager =
             activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(activity.currentFocus?.windowToken, 0)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

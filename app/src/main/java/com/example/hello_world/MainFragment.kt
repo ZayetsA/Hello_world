@@ -6,15 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.hello_world.databinding.FragmentMainBinding
 
 
 class MainFragment : Fragment(), View.OnClickListener {
-    private var navigationController: NavController? = null
-    private var _binding: FragmentMainBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var _binding: FragmentMainBinding
+    private val binding get() = _binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,7 +25,6 @@ class MainFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (requireActivity() as AppCompatActivity).supportActionBar?.hide()
-        navigationController = findNavController(view)
         binding.openRadio.setOnClickListener(this)
         binding.openInputs.setOnClickListener(this)
         binding.openButtons.setOnClickListener(this)
@@ -36,16 +33,11 @@ class MainFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         if (v != null) {
             when (v.id) {
-                binding.openButtons.id -> navigationController?.navigate(R.id.action_mainFragment_to_buttonsFragment)
-                binding.openInputs.id -> navigationController?.navigate(R.id.action_mainFragment_to_inputsFragment)
-                binding.openRadio.id -> navigationController?.navigate(R.id.action_mainFragment_to_checkFragment)
+                binding.openButtons.id -> findNavController().navigate(R.id.action_mainFragment_to_buttonsFragment)
+                binding.openInputs.id -> findNavController().navigate(R.id.action_mainFragment_to_inputsFragment)
+                binding.openRadio.id -> findNavController().navigate(R.id.action_mainFragment_to_checkFragment)
 
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
