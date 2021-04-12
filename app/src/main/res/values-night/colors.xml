@@ -5,12 +5,12 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#141414</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="text_color">#FF000000</color>
-    <color name="main_button_color">#547EFF</color>
+    <color name="text_color">#FFFFFFFF</color>
+    <color name="main_button_color">#303F9F</color>
     <color name="rv_buttons_color">#303F9F</color>
-    <color name="title_bar_color">#4CDAC5</color>
+    <color name="title_bar_color">#FF018786</color>
     <color name="dark_gray">#A4A2A3</color>
-    <color name="inputs_foreground">#FFFFFF</color>
+    <color name="inputs_foreground">#2B2B2B</color>
 </resources>
