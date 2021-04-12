@@ -11,14 +11,13 @@ import com.example.hello_world.databinding.FragmentMainBinding
 
 
 class MainFragment : Fragment(), View.OnClickListener {
-    private lateinit var _binding: FragmentMainBinding
-    private val binding get() = _binding
+    private lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
     }
 
