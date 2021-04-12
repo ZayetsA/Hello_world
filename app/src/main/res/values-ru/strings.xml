@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Hello_world</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_earth">image_earth</string>
+    <string name="second_part_of_title">МИР</string>
+    <string name="first_part_of_title">Привет</string>
+    <string name="first_btn_caption">Кнопки и табуретки</string>
+    <string name="second_btn_caption">Поля выпаса ввода</string>
+    <string name="third_btn_caption">Чекбокс на Радио</string>
+    <string name="actionbutton">ActionButton</string>
+    <string name="buttons_descr">Кнопка плюс добавляет новую кнопку в контейнер наверху</string>
+    <string name="description_inputs_text">Поля ввода разного типа</string>
+    <string name="one_line_input_text">Однострочный текст</string>
+    <string name="five_line_input_text">Многострочный текст</string>
+    <string name="password_input_text">пароль</string>
+    <string name="numbers_input_text">цифры</string>
+    <string name="button_hidder_text">Спрятать клавиатуру</string>
+    <string name="rv_item_name">Кнопка номер</string>
+    <string name="inputs_header_text">Кнопка Приборы отображает приборы</string>
+    <string name="tools_cb_text">Приборы</string>
+    <string name="radio_cb_text">Включить радио</string>
+    <string name="enable_seek_cb_text">Включить ползунок</string>
+    <string name="radio_inputs_text">Выбрать варинат по радио</string>
+    <string name="seek_bar_text">Выбрать вариант ползунком</string>
+    <string name="rb_1_text">Вариант 1</string>
+    <string name="rb_2_text">Вариант 2</string>
+    <string name="rb_3_text">Вариант 3</string>
+</resources>
