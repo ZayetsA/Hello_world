@@ -12,14 +12,14 @@ import com.example.hello_world.databinding.FragmentInputsBinding
 
 
 class InputsFragment : Fragment() {
-    private lateinit var _binding: FragmentInputsBinding
-    private val binding get() = _binding
+    private lateinit var binding: FragmentInputsBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentInputsBinding.inflate(inflater, container, false)
+        binding = FragmentInputsBinding.inflate(inflater, container, false)
         return binding.root
     }
 

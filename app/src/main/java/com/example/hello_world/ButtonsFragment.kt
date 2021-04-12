@@ -16,8 +16,7 @@ import java.util.*
 
 class ButtonsFragment : Fragment() {
     private var listOfButtons = ArrayList<ButtonModel>()
-    private lateinit var _binding: FragmentButtonsBinding
-    private val binding get() = _binding
+    private lateinit var binding: FragmentButtonsBinding
     private lateinit var adapter: ButtonAdapter
     private var lastContactId = 1
 
@@ -25,7 +24,7 @@ class ButtonsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentButtonsBinding.inflate(inflater, container, false)
+        binding = FragmentButtonsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
