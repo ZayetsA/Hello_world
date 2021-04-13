@@ -24,6 +24,7 @@ class InputsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        setupToolBar()
         binding.buttonCloseKeyboard.setOnClickListener {
             activity?.let { it1 ->
                 hideSoftKeyboard(it1)
@@ -31,6 +32,12 @@ class InputsFragment : Fragment() {
         }
         (requireActivity() as AppCompatActivity).supportActionBar?.show()
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    private fun setupToolBar() {
+        binding.toolbar.setNavigationIcon(R.drawable.arrow)
+        binding.toolbar.title = getText(R.string.buttons_input_title)
+        binding.toolbar.setNavigationOnClickListener { requireActivity().onBackPressed() }
     }
 
     private fun hideSoftKeyboard(activity: Activity) {

@@ -13,4 +13,5 @@
     <color name="title_bar_color">#4CDAC5</color>
     <color name="dark_gray">#A4A2A3</color>
     <color name="inputs_foreground">#FFFFFF</color>
+    <color name="arrow_back_color">#F19A0F</color>
 </resources>

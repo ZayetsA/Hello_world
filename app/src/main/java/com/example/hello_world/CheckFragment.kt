@@ -26,12 +26,19 @@ class CheckFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        setupToolBar()
         checkBoxGroupController()
         radioGroupController()
         seekController()
         disableAll()
         (requireActivity() as AppCompatActivity).supportActionBar?.show()
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    private fun setupToolBar() {
+        binding.toolbar.setNavigationIcon(R.drawable.arrow)
+        binding.toolbar.title = getText(R.string.buttons_check_title)
+        binding.toolbar.setNavigationOnClickListener { requireActivity().onBackPressed() }
     }
 
     private fun checkBoxGroupController() {
@@ -83,12 +90,14 @@ class CheckFragment : Fragment() {
                 progress: Int, fromUser: Boolean
             ) {
                 if (isEnabledRadioGroup()) {
-
                     when (seek.progress) {
                         1 -> binding.radio1.isChecked = true
                         2 -> binding.radio2.isChecked = true
                         3 -> binding.radio3.isChecked = true
-                        else -> binding.radioGroup.clearCheck()
+                        else -> {
+                            binding.radioGroup.clearCheck()
+                            resetRadioGrout()
+                        }
                     }
                 }
             }
@@ -96,7 +105,6 @@ class CheckFragment : Fragment() {
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
                 if (isEnabledRadioGroup()) {
                     resetRadioGrout()
-                    binding.radioGroup.clearCheck()
                 }
             }
 

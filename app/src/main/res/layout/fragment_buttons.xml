@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ButtonsFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/title_bar_color"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintBottom_toTopOf="@id/description_buttons"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
@@ -23,14 +34,13 @@
         android:id="@+id/description_buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/head_padding_top"
-        android:paddingBottom="@dimen/head_padding_bottom"
+        android:layout_marginBottom="5dp"
         android:text="@string/buttons_descr"
         android:textSize="@dimen/small_text"
         app:layout_constraintBottom_toTopOf="@+id/rv_buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         tools:ignore="SmallSp" />
 
     <androidx.recyclerview.widget.RecyclerView

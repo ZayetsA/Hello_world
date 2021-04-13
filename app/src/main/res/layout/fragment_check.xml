@@ -4,26 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/big_padding"
     tools:context=".CheckFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar_color"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintBottom_toTopOf="@id/description_inputs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <TextView
         android:id="@+id/description_inputs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin"
         android:paddingTop="@dimen/head_padding_bottom"
         android:paddingBottom="@dimen/head_padding_bottom"
         android:text="@string/inputs_header_text"
         android:textSize="@dimen/small_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:ignore="SmallSp" />
 
     <CheckBox
         android:id="@+id/access_tool_check"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin"
         android:button="@drawable/custom_cb"
         android:buttonTint="@color/main_button_color"
         android:fontFamily="sans-serif-smallcaps"
@@ -32,11 +43,12 @@
         android:textSize="@dimen/cb_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_inputs" />
+        app:layout_constraintTop_toBottomOf="@+id/description_inputs"
+        app:layout_constraintWidth_percent=".7" />
 
     <CheckBox
         android:id="@+id/access_radio"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:button="@drawable/custom_cb"
         android:buttonTint="@color/main_button_color"
@@ -46,11 +58,12 @@
         android:textSize="@dimen/cb_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/access_tool_check" />
+        app:layout_constraintTop_toBottomOf="@+id/access_tool_check"
+        app:layout_constraintWidth_percent=".7" />
 
     <CheckBox
         android:id="@+id/access_seek"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:button="@drawable/custom_cb"
         android:buttonTint="@color/main_button_color"
@@ -60,7 +73,8 @@
         android:textSize="@dimen/cb_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/access_radio" />
+        app:layout_constraintTop_toBottomOf="@+id/access_radio"
+        app:layout_constraintWidth_percent=".7" />
 
     <TextView
         android:id="@+id/radio_inputs"
@@ -128,12 +142,12 @@
         tools:ignore="SmallSp" />
 
     <androidx.appcompat.widget.AppCompatSeekBar
-        android:progressTint="@color/main_button_color"
         android:id="@+id/seek_radio_control"
         android:layout_width="@dimen/width_of_seek_rb_control"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/main_margin"
         android:max="3"
+        android:progressTint="@color/main_button_color"
         android:thumb="@drawable/thumb"
         android:tickMark="@drawable/tickmark"
         app:layout_constraintEnd_toEndOf="parent"

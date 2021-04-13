@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Чудесное hello world приложение</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buttons_fragment_title">Кнопки</string>
+    <string name="buttons_input_title">Поля ввода</string>
+    <string name="buttons_check_title">Поля проверки</string>
     <string name="image_earth">image_earth</string>
     <string name="second_part_of_title">МИР</string>
     <string name="first_part_of_title">Привет</string>

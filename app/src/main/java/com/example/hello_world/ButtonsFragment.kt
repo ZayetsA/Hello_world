@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.ConfigurationCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,12 +28,18 @@ class ButtonsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        (requireActivity() as AppCompatActivity).supportActionBar?.show()
+        setupToolBar()
         buildButtonsRV()
         binding.addButton.setOnClickListener {
             addButton()
             adapter.notifyDataSetChanged()
         }
+    }
+
+    private fun setupToolBar() {
+        binding.toolbar.setNavigationIcon(R.drawable.arrow)
+        binding.toolbar.title = getText(R.string.buttons_fragment_title)
+        binding.toolbar.setNavigationOnClickListener { requireActivity().onBackPressed() }
     }
 
     private fun buildButtonsRV() {

@@ -4,10 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padding_end"
     tools:context=".InputsFragment">
 
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_marginBottom="@dimen/main_margin"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar_color"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintBottom_toTopOf="@id/description_inputs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
     <TextView
+        android:layout_marginBottom="@dimen/main_margin"
         android:id="@+id/description_inputs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +35,7 @@
 
     <EditText
         android:id="@+id/one_line_input"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@drawable/custom_input"
         android:hint="@string/one_line_input_text"
@@ -37,11 +49,12 @@
         app:layout_constraintBottom_toTopOf="@+id/five_line_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/description_inputs" />
+        app:layout_constraintTop_toBottomOf="@id/description_inputs"
+        app:layout_constraintWidth_percent=".9" />
 
     <EditText
         android:id="@+id/five_line_input"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginTop="@dimen/main_margin"
         android:background="@drawable/custom_input"
@@ -57,7 +70,8 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/one_line_input" />
+        app:layout_constraintTop_toBottomOf="@id/one_line_input"
+        app:layout_constraintWidth_percent=".9" />
 
 
     <EditText
@@ -75,10 +89,9 @@
         android:singleLine="true"
         android:textColorHint="@color/dark_gray"
         android:textSize="16sp"
-
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/five_line_input"
         app:layout_constraintTop_toBottomOf="@id/five_line_input"
-        app:layout_constraintWidth_percent="0.66" />
+        app:layout_constraintWidth_percent="0.56" />
 
     <EditText
         android:id="@+id/numbers_input"
@@ -95,7 +108,7 @@
         android:textColorHint="@color/dark_gray"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button_close_keyboard"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/five_line_input"
         app:layout_constraintTop_toBottomOf="@id/five_line_input"
         app:layout_constraintWidth_percent="0.3" />
 
@@ -108,7 +121,7 @@
         android:paddingTop="@dimen/input_padding"
         android:paddingBottom="@dimen/input_padding"
         android:text="@string/button_hidder_text"
-        android:textSize="13sp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@id/numbers_input"
         app:layout_constraintStart_toStartOf="@+id/numbers_input"
         app:layout_constraintTop_toBottomOf="@+id/numbers_input"
