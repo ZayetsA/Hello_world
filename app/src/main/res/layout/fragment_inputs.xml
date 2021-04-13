@@ -21,106 +21,97 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SmallSp" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/one_line_input"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/blue_for_mb"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_input"
+        android:hint="@string/one_line_input_text"
+        android:maxLines="1"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:scrollbars="horizontal"
+        android:singleLine="true"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/five_line_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/description_inputs">
+        app:layout_constraintTop_toBottomOf="@id/description_inputs" />
 
-        <!--Max length is bad, i know, but horizontal scroll looks ugly-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/one_line_input_text"
-            android:maxLines="1"
-            android:scrollbars="horizontal"
-            android:singleLine="true" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/five_line_input"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/input_padding"
-        app:boxStrokeColor="@color/blue_for_mb"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/main_margin"
+        android:background="@drawable/custom_input"
+        android:hint="@string/five_line_input_text"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:maxLines="@integer/material_motion_duration_long_1"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:scrollbarStyle="insideInset"
+        android:singleLine="true"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/one_line_input">
+        app:layout_constraintTop_toBottomOf="@id/one_line_input" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/five_line_input_text"
-            android:inputType="textMultiLine"
-            android:lines="5"
-            android:maxLines="@integer/material_motion_duration_long_1"
-            android:scrollbars="vertical"
-            android:singleLine="true" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/password_input"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:paddingStart="0dp"
-        android:paddingTop="@dimen/input_padding"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/main_margin"
+        android:background="@drawable/custom_input"
+        android:hint="@string/password_input_text"
+        android:inputType="textPassword"
+        android:maxLength="30"
+        android:maxLines="@integer/material_motion_duration_long_1"
+        android:paddingStart="12dp"
         android:paddingEnd="@dimen/padding_end"
-        app:boxStrokeColor="@color/blue_for_mb"
-        app:layout_constraintEnd_toStartOf="@+id/numbers_input"
+        android:singleLine="true"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="16sp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/five_line_input"
-        app:layout_constraintWidth_percent="0.66">
+        app:layout_constraintWidth_percent="0.66" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/password_input_text"
-            android:inputType="textPassword"
-            android:maxLength="30"
-            android:maxLines="@integer/material_motion_duration_long_1"
-            android:singleLine="true" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/numbers_input"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/input_padding"
-        app:boxStrokeColor="@color/blue_for_mb"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/main_margin"
+        android:background="@drawable/custom_input"
+        android:hint="@string/numbers_input_text"
+        android:inputType="numberDecimal"
+        android:maxLines="@integer/material_motion_duration_long_1"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button_close_keyboard"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/password_input"
         app:layout_constraintTop_toBottomOf="@id/five_line_input"
-        app:layout_constraintWidth_percent="0.33">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/numbers_input_text"
-            android:inputType="numberDecimal"
-            android:maxLines="@integer/material_motion_duration_long_1"
-            android:singleLine="true" />
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintWidth_percent="0.3" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_close_keyboard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/btn_padding_top"
+        android:backgroundTint="@color/main_button_color"
         android:paddingTop="@dimen/input_padding"
         android:paddingBottom="@dimen/input_padding"
         android:text="@string/button_hidder_text"
-        android:textSize="@dimen/small_text"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="@id/numbers_input"
+        app:layout_constraintStart_toStartOf="@+id/numbers_input"
         app:layout_constraintTop_toBottomOf="@+id/numbers_input"
-        app:layout_constraintWidth_percent="0.33" />
+        app:layout_constraintWidth_percent="0.3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
