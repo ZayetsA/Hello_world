@@ -1,9 +1,9 @@
-package com.example.hello_world_app
+package com.example.hello.world.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import com.example.hello_world_app.databinding.ActivityMainBinding
+import com.example.hello.world.app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

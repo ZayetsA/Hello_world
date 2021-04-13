@@ -1,4 +1,4 @@
-package com.example.hello_world_app.ui.input
+package com.example.hello.world.app.ui.input
 
 import android.app.Activity
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
-import com.example.hello_world_app.R
-import com.example.hello_world_app.databinding.FragmentInputsBinding
+import com.example.hello.world.app.R
+import com.example.hello.world.app.databinding.FragmentInputsBinding
 
 class InputsFragment : Fragment() {
 

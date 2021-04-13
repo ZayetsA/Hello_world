@@ -1,4 +1,4 @@
-package com.example.hello_world_app.ui.buttons
+package com.example.hello.world.app.hello_world_app.ui.buttons
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.core.os.ConfigurationCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hello_world_app.R
-import com.example.hello_world_app.databinding.FragmentButtonsBinding
-import com.example.hello_world_app.ui.buttons.adapter.ButtonAdapter
-import com.example.hello_world_app.ui.buttons.model.ButtonModel
+import com.example.hello.world.app.R
+import com.example.hello.world.app.databinding.FragmentButtonsBinding
+import com.example.hello.world.app.ui.buttons.adapter.ButtonAdapter
+import com.example.hello.world.app.ui.buttons.model.ButtonModel
 import com.ibm.icu.text.RuleBasedNumberFormat
 import java.util.*
 

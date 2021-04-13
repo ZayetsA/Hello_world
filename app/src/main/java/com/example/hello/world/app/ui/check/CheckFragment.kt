@@ -1,4 +1,4 @@
-package com.example.hello_world_app.ui.check
+package com.example.hello.world.app.ui.check
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,8 @@ import android.widget.RadioButton
 import android.widget.SeekBar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.hello_world_app.R
-import com.example.hello_world_app.databinding.FragmentCheckBinding
-
+import com.example.hello.world.app.R
+import com.example.hello.world.app.databinding.FragmentCheckBinding
 
 class CheckFragment : Fragment() {
 
