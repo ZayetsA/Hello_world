@@ -1,4 +1,4 @@
-package com.example.hello_world
+package com.example.hello_world_app.ui.buttons
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +7,15 @@ import android.view.ViewGroup
 import androidx.core.os.ConfigurationCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hello_world.adapter.ButtonAdapter
-import com.example.hello_world.databinding.FragmentButtonsBinding
-import com.example.hello_world.model.ButtonModel
+import com.example.hello_world_app.R
+import com.example.hello_world_app.databinding.FragmentButtonsBinding
+import com.example.hello_world_app.ui.buttons.adapter.ButtonAdapter
+import com.example.hello_world_app.ui.buttons.model.ButtonModel
 import com.ibm.icu.text.RuleBasedNumberFormat
 import java.util.*
 
 class ButtonsFragment : Fragment() {
+
     private var listOfButtons = ArrayList<ButtonModel>()
     private lateinit var binding: FragmentButtonsBinding
     private lateinit var adapter: ButtonAdapter
@@ -22,7 +24,7 @@ class ButtonsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentButtonsBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -30,23 +32,27 @@ class ButtonsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setupToolBar()
         buildButtonsRV()
-        binding.addButton.setOnClickListener {
+        binding.buttonsActionButton.setOnClickListener {
             addButton()
             adapter.notifyDataSetChanged()
         }
     }
 
     private fun setupToolBar() {
-        binding.toolbar.setNavigationIcon(R.drawable.arrow)
-        binding.toolbar.title = getText(R.string.buttons_fragment_title)
-        binding.toolbar.setNavigationOnClickListener { requireActivity().onBackPressed() }
+        with(binding.buttonsToolbar) {
+            setNavigationIcon(R.drawable.toolbar_back_button_arrow)
+            title = getText(R.string.buttons_fragment_title)
+            setNavigationOnClickListener { requireActivity().onBackPressed() }
+        }
     }
 
     private fun buildButtonsRV() {
         addButton()
         adapter = ButtonAdapter(listOfButtons)
-        binding.rvButtons.adapter = adapter
-        binding.rvButtons.layoutManager = LinearLayoutManager(context)
+        with(binding) {
+            buttonsRecycleView.adapter = adapter
+            buttonsRecycleView.layoutManager = LinearLayoutManager(context)
+        }
     }
 
     private fun addButton() {

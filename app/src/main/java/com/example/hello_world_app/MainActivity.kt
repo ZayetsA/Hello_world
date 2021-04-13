@@ -1,11 +1,12 @@
-package com.example.hello_world
+package com.example.hello_world_app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import com.example.hello_world.databinding.ActivityMainBinding
+import com.example.hello_world_app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var navController: NavController
     private lateinit var binding: ActivityMainBinding
 

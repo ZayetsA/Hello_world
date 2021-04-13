@@ -1,4 +1,4 @@
-package com.example.hello_world
+package com.example.hello_world_app.ui.input
 
 import android.app.Activity
 import android.os.Bundle
@@ -6,38 +6,38 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.hello_world.databinding.FragmentInputsBinding
-
+import com.example.hello_world_app.R
+import com.example.hello_world_app.databinding.FragmentInputsBinding
 
 class InputsFragment : Fragment() {
-    private lateinit var binding: FragmentInputsBinding
 
+    private lateinit var binding: FragmentInputsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentInputsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setupToolBar()
-        binding.buttonCloseKeyboard.setOnClickListener {
-            activity?.let { it1 ->
-                hideSoftKeyboard(it1)
+        binding.inputsButtonCloseKeyboard.setOnClickListener {
+            activity?.let { view ->
+                hideSoftKeyboard(view)
             }
         }
-        (requireActivity() as AppCompatActivity).supportActionBar?.show()
-        super.onViewCreated(view, savedInstanceState)
     }
 
     private fun setupToolBar() {
-        binding.toolbar.setNavigationIcon(R.drawable.arrow)
-        binding.toolbar.title = getText(R.string.buttons_input_title)
-        binding.toolbar.setNavigationOnClickListener { requireActivity().onBackPressed() }
+        with(binding.inputsToolBar) {
+            setNavigationIcon(R.drawable.toolbar_back_button_arrow)
+            title = getText(R.string.buttons_input_title)
+            setNavigationOnClickListener { requireActivity().onBackPressed() }
+        }
     }
 
     private fun hideSoftKeyboard(activity: Activity) {
