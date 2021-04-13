@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.hello.world.app.R
 import com.example.hello.world.app.databinding.FragmentMainBinding
 
-
 class MainFragment : Fragment(), View.OnClickListener {
 
     private lateinit var binding: FragmentMainBinding

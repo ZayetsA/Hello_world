@@ -49,7 +49,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputsHeader"
-        app:layout_constraintWidth_percent=".9" />
+        app:layout_constraintWidth_percent=".9"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/inputsEditTextMultiLine"
@@ -70,7 +71,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputsEditTextOneLine"
-        app:layout_constraintWidth_percent=".9" />
+        app:layout_constraintWidth_percent=".9"
+        android:autofillHints="" />
 
 
     <EditText
@@ -90,7 +92,8 @@
         android:textSize="@dimen/text_16"
         app:layout_constraintStart_toStartOf="@id/inputsEditTextMultiLine"
         app:layout_constraintTop_toBottomOf="@id/inputsEditTextMultiLine"
-        app:layout_constraintWidth_percent="0.56" />
+        app:layout_constraintWidth_percent="0.56"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/inputEditTextNumbers"
@@ -109,7 +112,8 @@
         app:layout_constraintBottom_toTopOf="@+id/inputsButtonCloseKeyboard"
         app:layout_constraintEnd_toEndOf="@id/inputsEditTextMultiLine"
         app:layout_constraintTop_toBottomOf="@id/inputsEditTextMultiLine"
-        app:layout_constraintWidth_percent="0.3" />
+        app:layout_constraintWidth_percent="0.3"
+        android:autofillHints="" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/inputsButtonCloseKeyboard"
@@ -119,7 +123,7 @@
         android:backgroundTint="@color/dark_blue"
         android:paddingTop="@dimen/padding_5"
         android:paddingBottom="@dimen/padding_5"
-        android:text="@string/button_hidder_text"
+        android:text="@string/button_hide_kb_text"
         android:textSize="@dimen/text_12"
         app:layout_constraintEnd_toEndOf="@id/inputEditTextNumbers"
         app:layout_constraintStart_toStartOf="@+id/inputEditTextNumbers"

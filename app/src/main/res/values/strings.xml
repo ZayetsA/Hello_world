@@ -1,6 +1,6 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Awesome hello world application</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" tools:keep="@string/hello_blank_fragment">Hello blank fragment</string>
     <string name="buttons_fragment_title">Buttons</string>
     <string name="buttons_input_title">Input fields</string>
     <string name="buttons_check_title">Check fields</string>
@@ -10,14 +10,14 @@
     <string name="first_btn_caption">Buttons and Stools</string>
     <string name="second_btn_caption">Grazing fields input</string>
     <string name="third_btn_caption">Checkbox on Radio</string>
-    <string name="actionbutton">ActionButton</string>
-    <string name="buttons_descr">The plus button adds a new button to the container at the top</string>
+    <string name="action_button">ActionButton</string>
+    <string name="buttons_description">The plus button adds a new button to the container at the top</string>
     <string name="description_inputs_text">Different types of input fields</string>
     <string name="one_line_input_text">Single line text</string>
     <string name="five_line_input_text">Multiline text</string>
     <string name="password_input_text">password</string>
     <string name="numbers_input_text">numbers</string>
-    <string name="button_hidder_text">Hide keyboard</string>
+    <string name="button_hide_kb_text">Hide keyboard</string>
     <string name="rv_item_name">Button number</string>
     <string name="inputs_header_text">The Gauges button displays the gauges.</string>
     <string name="tools_cb_text">Gauges</string>

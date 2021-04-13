@@ -56,7 +56,7 @@ class CheckFragment : Fragment() {
     private fun onAccessRadioStateChanged(compoundButton: CompoundButton, isChecked: Boolean) {
         if (isChecked) enableRadioGroup()
         else {
-            resetRadioGrout()
+            resetRadioGroup()
             disableRadioGroup()
         }
     }
@@ -110,7 +110,7 @@ class CheckFragment : Fragment() {
                             SEEKBAR_PROGRESS_VAL_3 -> checkRadioButton3.isChecked = true
                             else -> {
                                 checkRadioGroup.clearCheck()
-                                resetRadioGrout()
+                                resetRadioGroup()
                             }
                         }
                     }
@@ -119,14 +119,14 @@ class CheckFragment : Fragment() {
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
                 if (isEnabledRadioGroup()) {
-                    resetRadioGrout()
+                    resetRadioGroup()
                 }
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
                 if (isEnabledRadioGroup()) {
                     if (seekBar?.progress == 0) {
-                        resetRadioGrout()
+                        resetRadioGroup()
                         binding.checkRadioGroup.clearCheck()
                     }
                 }
@@ -134,7 +134,7 @@ class CheckFragment : Fragment() {
         })
     }
 
-    private fun resetRadioGrout() {
+    private fun resetRadioGroup() {
         for (i in 0 until binding.checkRadioGroup.childCount) {
             val radioButton = binding.checkRadioGroup.getChildAt(i) as RadioButton
             radioButton.isChecked = false
