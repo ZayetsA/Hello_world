@@ -49,21 +49,24 @@ class CheckFragment : Fragment() {
     }
 
     private fun onAccessToolStateChanged(compoundButton: CompoundButton, isChecked: Boolean) {
-        if (isChecked) enableTools()
-        else disableAll()
+        if (isChecked) {
+            enableTools()
+        } else disableAll()
     }
 
     private fun onAccessRadioStateChanged(compoundButton: CompoundButton, isChecked: Boolean) {
-        if (isChecked) enableRadioGroup()
-        else {
+        if (isChecked) {
+            enableRadioGroup()
+        } else {
             resetRadioGroup()
             disableRadioGroup()
         }
     }
 
     private fun onAccessSeekStateChanged(compoundButton: CompoundButton, isChecked: Boolean) {
-        if (isChecked) binding.checkSeekBar.isEnabled = true
-        else {
+        if (isChecked) {
+            binding.checkSeekBar.isEnabled = true
+        } else {
             binding.checkSeekBar.isEnabled = false
             resetSeek()
         }
@@ -82,12 +85,18 @@ class CheckFragment : Fragment() {
             checkRadioGroup.setOnCheckedChangeListener { _, checkedId ->
                 if (checkSeekBar.isEnabled) {
                     when (checkedId) {
-                        checkRadioButton1.id -> checkSeekBar.progress =
-                            SEEKBAR_PROGRESS_VAL_1
-                        checkRadioButton2.id -> checkSeekBar.progress =
-                            SEEKBAR_PROGRESS_VAL_2
-                        checkRadioButton3.id -> checkSeekBar.progress =
-                            SEEKBAR_PROGRESS_VAL_3
+                        checkRadioButton1.id -> checkSeekBar.setProgress(
+                            SEEKBAR_PROGRESS_VAL_1,
+                            true
+                        )
+                        checkRadioButton2.id -> checkSeekBar.setProgress(
+                            SEEKBAR_PROGRESS_VAL_2,
+                            true
+                        )
+                        checkRadioButton3.id -> checkSeekBar.setProgress(
+                            SEEKBAR_PROGRESS_VAL_3,
+                            true
+                        )
                         else -> checkSeekBar.progress = 0
                     }
                 }

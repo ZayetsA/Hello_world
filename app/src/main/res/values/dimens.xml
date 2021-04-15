@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!--margins-->
     <dimen name="margin_5">5dp</dimen>
     <dimen name="margin_15">15dp</dimen>
     <dimen name="margin_20">20dp</dimen>
-    <dimen name="margin_25" tools:keep="@dimen/margin_25">24dp</dimen>
-    <dimen name="margin_30" tools:keep="@dimen/margin_30">30dp</dimen>
     <!--paddings-->
     <dimen name="padding_5">5dp</dimen>
     <dimen name="padding_10">10dp</dimen>
     <dimen name="padding_20">20dp</dimen>
-    <dimen name="padding_30" tools:keep="@dimen/padding_30">30dp</dimen>
     <!--text-->
     <dimen name="text_12">12sp</dimen>
     <dimen name="text_14">14sp</dimen>

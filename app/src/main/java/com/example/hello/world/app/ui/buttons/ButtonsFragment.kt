@@ -44,11 +44,15 @@ class ButtonsFragment : Fragment() {
     private fun setScrollableFeature() {
         binding.buttonsRecycleView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                if (dy > 0 || dy < 0 && binding.buttonsActionButton.isShown) binding.buttonsActionButton.hide()
+                if (dy > 0 || dy < 0 && binding.buttonsActionButton.isShown) {
+                    binding.buttonsActionButton.hide()
+                }
             }
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                if (newState == RecyclerView.SCROLL_STATE_IDLE) binding.buttonsActionButton.show()
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    binding.buttonsActionButton.show()
+                }
                 super.onScrollStateChanged(recyclerView, newState)
             }
         })
