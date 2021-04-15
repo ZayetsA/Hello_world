@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.hello_world.MainFragment"
+        android:name="com.example.hello.world.app.ui.home.MainFragment"
         android:label="Home"
         tools:layout="@layout/fragment_main">
         <action
@@ -35,7 +35,7 @@
 
     <fragment
         android:id="@+id/buttonsFragment"
-        android:name="com.example.hello_world.ButtonsFragment"
+        android:name="com.example.hello.world.app.ui.buttons.ButtonsFragment"
         android:label="Buttons"
         tools:layout="@layout/fragment_buttons">
         <action
@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/checkFragment"
-        android:name="com.example.hello_world.CheckFragment"
+        android:name="com.example.hello.world.app.ui.check.CheckFragment"
         android:label="CheckBoxes"
         tools:layout="@layout/fragment_check">
         <action
@@ -63,7 +63,7 @@
 
     <fragment
         android:id="@+id/inputsFragment"
-        android:name="com.example.hello_world.InputsFragment"
+        android:name="com.example.hello.world.app.ui.input.InputsFragment"
         android:label="Inputs"
         tools:layout="@layout/fragment_inputs">
         <action

@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:paddingTop="@dimen/head_padding_top">
+    android:paddingTop="@dimen/padding_20">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/one_button"
-        android:layout_width="@dimen/item_btn_width"
+        android:id="@+id/itemFragment"
+        android:layout_width="@dimen/item_button_width"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@drawable/rv_btn_bg"
-        app:backgroundTint="@color/rv_buttons_color"
+        android:background="@drawable/item_button_background"
         android:clickable="true"
         android:focusable="true"
-        android:paddingStart="@dimen/item_padding"
-        android:paddingEnd="@dimen/item_padding"
+        android:paddingStart="@dimen/padding_10"
+        android:paddingEnd="@dimen/padding_10"
         android:textColor="@color/white"
-        android:textSize="@dimen/item_text_size"
+        android:textSize="@dimen/text_14"
+        app:backgroundTint="@color/dark_blue"
         tools:ignore="SmallSp" />
 </LinearLayout>

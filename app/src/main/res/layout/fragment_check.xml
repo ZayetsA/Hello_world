@@ -2,142 +2,148 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/big_padding"
-    tools:context=".CheckFragment">
+    tools:context=".ui.check.CheckFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/checkToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_green"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintBottom_toTopOf="@id/checkTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <TextView
-        android:id="@+id/description_inputs"
+        android:id="@+id/checkTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/head_padding_bottom"
-        android:paddingBottom="@dimen/head_padding_bottom"
+        android:layout_marginTop="@dimen/margin_15"
         android:text="@string/inputs_header_text"
-        android:textSize="@dimen/small_text"
+        android:textSize="@dimen/text_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkToolbar"
         tools:ignore="SmallSp" />
 
     <CheckBox
-        android:id="@+id/access_tool_check"
-        android:layout_width="match_parent"
+        android:id="@+id/checkCheckBoxTools"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:button="@drawable/custom_cb"
-        android:buttonTint="@color/main_button_color"
+        android:layout_marginTop="@dimen/margin_15"
+        android:button="@drawable/checkbox_background"
+        android:buttonTint="@color/light_blue"
         android:fontFamily="sans-serif-smallcaps"
         android:layoutDirection="rtl"
         android:text="@string/tools_cb_text"
-        android:textSize="@dimen/cb_text_size"
+        android:textSize="@dimen/text_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description_inputs" />
+        app:layout_constraintTop_toBottomOf="@+id/checkTitle"
+        app:layout_constraintWidth_percent=".7" />
 
     <CheckBox
-        android:id="@+id/access_radio"
-        android:layout_width="match_parent"
+        android:id="@+id/checkCheckBoxRadio"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:button="@drawable/custom_cb"
-        android:buttonTint="@color/main_button_color"
+        android:button="@drawable/checkbox_background"
+        android:buttonTint="@color/light_blue"
         android:fontFamily="sans-serif-smallcaps"
         android:layoutDirection="rtl"
         android:text="@string/radio_cb_text"
-        android:textSize="@dimen/cb_text_size"
+        android:textSize="@dimen/text_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/access_tool_check" />
+        app:layout_constraintTop_toBottomOf="@+id/checkCheckBoxTools"
+        app:layout_constraintWidth_percent=".7" />
 
     <CheckBox
-        android:id="@+id/access_seek"
-        android:layout_width="match_parent"
+        android:id="@+id/checkCheckBoxSeek"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:button="@drawable/custom_cb"
-        android:buttonTint="@color/main_button_color"
+        android:button="@drawable/checkbox_background"
+        android:buttonTint="@color/light_blue"
         android:fontFamily="sans-serif-smallcaps"
         android:layoutDirection="rtl"
         android:text="@string/enable_seek_cb_text"
-        android:textSize="@dimen/cb_text_size"
+        android:textSize="@dimen/text_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/access_radio" />
+        app:layout_constraintTop_toBottomOf="@+id/checkCheckBoxRadio"
+        app:layout_constraintWidth_percent=".7" />
 
     <TextView
-        android:id="@+id/radio_inputs"
+        android:id="@+id/checkRadioGroupSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/big_mt"
-        android:paddingTop="@dimen/head_padding_bottom"
-        android:paddingBottom="@dimen/head_padding_bottom"
+        android:layout_marginTop="@dimen/margin_20"
         android:text="@string/radio_inputs_text"
-        android:textSize="@dimen/small_text"
+        android:textSize="@dimen/text_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/access_seek"
+        app:layout_constraintTop_toBottomOf="@id/checkCheckBoxSeek"
         tools:ignore="SmallSp" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/checkRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radio_inputs">
+        app:layout_constraintTop_toBottomOf="@+id/checkRadioGroupSubtitle">
 
         <RadioButton
-            android:id="@+id/radio_1"
+            android:id="@+id/checkRadioButton1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/ms_radio_member"
             android:layout_weight="1"
-            android:buttonTint="@color/main_button_color"
+            android:buttonTint="@color/light_blue"
             android:text="@string/rb_1_text" />
 
         <RadioButton
-            android:id="@+id/radio_2"
+            android:id="@+id/checkRadioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/ms_radio_member"
             android:layout_weight="1"
-            android:buttonTint="@color/main_button_color"
+            android:buttonTint="@color/light_blue"
             android:text="@string/rb_2_text" />
 
         <RadioButton
-            android:id="@+id/radio_3"
+            android:id="@+id/checkRadioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/ms_radio_member"
             android:layout_weight="1"
-            android:buttonTint="@color/main_button_color"
+            android:buttonTint="@color/light_blue"
             android:text="@string/rb_3_text" />
     </RadioGroup>
 
     <TextView
-        android:id="@+id/seek_bar_desc"
+        android:id="@+id/checkSeekBarSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/main_margin"
-        android:paddingTop="@dimen/head_padding_bottom"
-        android:paddingBottom="@dimen/head_padding_bottom"
+        android:layout_marginTop="@dimen/margin_15"
         android:text="@string/seek_bar_text"
-        android:textSize="@dimen/small_text"
+        android:textSize="@dimen/text_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@id/checkRadioGroup"
         tools:ignore="SmallSp" />
 
     <androidx.appcompat.widget.AppCompatSeekBar
-        android:progressTint="@color/main_button_color"
-        android:id="@+id/seek_radio_control"
-        android:layout_width="@dimen/width_of_seek_rb_control"
+        android:id="@+id/checkSeekBar"
+        android:layout_width="@dimen/seek_width_350"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/main_margin"
+        android:layout_marginTop="@dimen/margin_15"
         android:max="3"
-        android:thumb="@drawable/thumb"
-        android:tickMark="@drawable/tickmark"
+        android:progressTint="@color/light_blue"
+        android:thumb="@drawable/seekbar_thumb"
+        android:tickMark="@drawable/seekbar_tickmark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/seek_bar_desc" />
+        app:layout_constraintTop_toBottomOf="@id/checkSeekBarSubtitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

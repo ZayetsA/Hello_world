@@ -1,4 +1,6 @@
-<set xmlns:android="http://schemas.android.com/apk/res/android">
+<set xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:keep="@anim/fade_out">
     <alpha
         android:duration="@android:integer/config_mediumAnimTime"
         android:fromAlpha="1.0"

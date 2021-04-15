@@ -1,10 +1,10 @@
-package com.example.hello_world.adapter
+package com.example.hello.world.app.ui.buttons.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hello_world.databinding.ItemButtonBinding
-import com.example.hello_world.model.ButtonModel
+import com.example.hello.world.app.databinding.ItemButtonBinding
+import com.example.hello.world.app.ui.buttons.model.ButtonModel
 
 class ButtonAdapter(private val itemsList: List<ButtonModel>) :
     RecyclerView.Adapter<ButtonAdapter.ButtonItemHolder>() {
@@ -28,7 +28,7 @@ class ButtonAdapter(private val itemsList: List<ButtonModel>) :
     class ButtonItemHolder(private val itemBinding: ItemButtonBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(item: ButtonModel) {
-            itemBinding.oneButton.text = item.name
+            itemBinding.itemFragment.text = item.name
         }
     }
 }

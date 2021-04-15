@@ -1,20 +1,22 @@
 <resources>
     <string name="app_name">Чудесное hello world приложение</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buttons_fragment_title">Кнопки</string>
+    <string name="buttons_input_title">Поля ввода</string>
+    <string name="buttons_check_title">Поля проверки</string>
     <string name="image_earth">image_earth</string>
     <string name="second_part_of_title">МИР</string>
     <string name="first_part_of_title">Привет</string>
     <string name="first_btn_caption">Кнопки и табуретки</string>
     <string name="second_btn_caption">Поля выпаса ввода</string>
     <string name="third_btn_caption">Чекбокс на Радио</string>
-    <string name="actionbutton">ActionButton</string>
-    <string name="buttons_descr">Кнопка плюс добавляет новую кнопку в контейнер наверху</string>
+    <string name="action_button">ActionButton</string>
+    <string name="buttons_description">Кнопка плюс добавляет новую кнопку в контейнер наверху</string>
     <string name="description_inputs_text">Поля ввода разного типа</string>
     <string name="one_line_input_text">Однострочный текст</string>
     <string name="five_line_input_text">Многострочный текст</string>
     <string name="password_input_text">пароль</string>
     <string name="numbers_input_text">цифры</string>
-    <string name="button_hidder_text">Спрятать клавиатуру</string>
+    <string name="button_hide_kb_text">Спрятать клавиатуру</string>
     <string name="rv_item_name">Кнопка номер</string>
     <string name="inputs_header_text">Кнопка Приборы отображает приборы</string>
     <string name="tools_cb_text">Приборы</string>

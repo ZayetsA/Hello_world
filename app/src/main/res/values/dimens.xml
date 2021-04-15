@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="floating_action_margin">24dp</dimen>
-    <dimen name="head_padding_top">10dp</dimen>
-    <dimen name="head_padding_bottom">5dp</dimen>
-    <dimen name="small_text">12sp</dimen>
-    <dimen name="input_padding">8dp</dimen>
-    <dimen name="padding_end">20dp</dimen>
-    <dimen name="btn_padding_top">5dp</dimen>
-    <dimen name="main_margin">15dp</dimen>
-    <dimen name="header_mt">16dp</dimen>
-    <dimen name="header_mb">20dp</dimen>
-    <dimen name="header_text_size">44sp</dimen>
-    <dimen name="image_w">200dp</dimen>
-    <dimen name="image_h">200dp</dimen>
-    <dimen name="header_pb">15dp</dimen>
-    <dimen name="main_btn_width">350dp</dimen>
-    <dimen name="main_btn_text_size">20sp</dimen>
-    <dimen name="item_text_size">16sp</dimen>
-    <dimen name="item_padding">16dp</dimen>
-    <dimen name="item_btn_width">250dp</dimen>
-    <dimen name="big_padding">30dp</dimen>
-    <dimen name="cb_text_size">20sp</dimen>
-    <dimen name="big_mt">30dp</dimen>
-    <dimen name="ms_radio_member">24dp</dimen>
-    <dimen name="width_of_seek_rb_control">350dp</dimen>
+    <!--margins-->
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <!--paddings-->
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <!--text-->
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_44">44sp</dimen>
+    <!--personal-->
+    <dimen name="image_width_200">200dp</dimen>
+    <dimen name="image_height_200">200dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="main_button_wight">350dp</dimen>
+    <dimen name="item_button_width">250dp</dimen>
+    <dimen name="seek_width_350">350dp</dimen>
+    <dimen name="edit_text_height_50">50dp</dimen>
 </resources>
