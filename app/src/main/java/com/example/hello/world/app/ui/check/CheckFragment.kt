@@ -51,7 +51,9 @@ class CheckFragment : Fragment() {
     private fun onAccessToolStateChanged(compoundButton: CompoundButton, isChecked: Boolean) {
         if (isChecked) {
             enableTools()
-        } else disableAll()
+        } else {
+            disableAll()
+        }
     }
 
     private fun onAccessRadioStateChanged(compoundButton: CompoundButton, isChecked: Boolean) {
